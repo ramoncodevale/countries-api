@@ -23,7 +23,7 @@ export function Home() {
     });
 
     return (
-        <section className="flex flex-col justify-between px-14 mt-[30px] ">
+        <section className="flex flex-col justify-between px-14 mt-[30px] bg-white dark:bg-very-dark-background">
             <div className="flex justify-between items-center">
                 <div className="relative group">
                     <input
@@ -31,14 +31,14 @@ export function Home() {
                         placeholder="Search for a country..."
                         value={searchTerm}
                         onChange={handleSearchChange}
-                        className="w-96 h-12 bg-white pl-14 shadow-md text-dark-gray-input rounded-lg"
+                        className="w-96 h-12 bg-white dark:bg-dark-blue  text-very-dark-light pl-14 shadow-md   rounded-lg"
                     />
                     <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
-                        <IoIosSearch className="text-dark-gray-input size-4" />
+                        <IoIosSearch className="dark:text-dark-gray-input text-very-dark-light size-4" />
                     </div>
                 </div>
                 <select
-                    className="cursor-pointer w-44 h-12 flex justify-between px-2 shadow-md bg-white"
+                    className="cursor-pointer w-44 h-12 flex justify-between px-2 shadow-md bg-white dark:bg-dark-blue dark:text-very-dark-light  text-very-dark-background"
                     value={selectedRegion}
                     onChange={handleRegionChange}
                 >
@@ -50,7 +50,7 @@ export function Home() {
                     <option value="Oceania">Oceania</option>
                 </select>
             </div>
-            <div className="flex flex-wrap items-baseline gap-14 justify-between">
+            <div className="flex flex-wrap items-baseline gap-14 justify-between ">
                 {filteredData.map((country) => (
                     <Card
                         key={country.name}

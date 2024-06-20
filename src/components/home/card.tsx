@@ -17,8 +17,8 @@ export function Card({ name, population, region, capital, flags }: CardProps) {
         <Link to={`/country/${name}`}>
             <div className="flex flex-col mt-10 w-60 h-auto">
                 <img src={flags.svg} alt={`${name} flag`} className="w-full h-32 rounded-t-md object-cover" />
-                <div className="bg-white shadow-md p-4">
-                    <div className="pb-6">
+                <div className="bg-white dark:bg-dark-blue shadow-md p-4">
+                    <div className="pb-6  dark:text-very-dark-light text-very-blue-dark">
                         <p className="font-bold text-lg">{name}</p>
                         <div className="mt-4">
                             <p className="text-sm"><span className="text-sm font-semibold">Population:</span> {population.toLocaleString()}</p>
