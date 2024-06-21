@@ -13,10 +13,12 @@ export default {
         'dark-gray-input':  'hsl(0, 0%, 52%)',
         'very-dark-light': 'hsl(0, 0%, 98%)',
         'white-dark-mode': 'hsl(0, 0%, 100%)',
+      },
+      fontFamily: {
+        sans: ['Nunito Sans', 'sans-serif'],
+      },
     },
-    fontFamily: 'Nunito Sans, sans-serif',
   },
   plugins: [],
+  darkMode: 'class', // Adiciona o modo escuro como classe
 }
-}
-

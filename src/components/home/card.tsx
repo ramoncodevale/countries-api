@@ -15,7 +15,7 @@ interface CardProps {
 export function Card({ name, population, region, capital, flags }: CardProps) {
     return (
         <Link to={`/country/${name}`}>
-            <div className="lg:flex flex-col mt-10 w-60 h-auto">
+            <div className="lg:flex flex-col  mt-10 w-60 h-auto">
                 <img src={flags.svg} alt={`${name} flag`} className="w-full h-32 rounded-t-md object-cover" />
                 <div className="bg-white dark:bg-dark-blue shadow-md p-4">
                     <div className="pb-6  dark:text-very-dark-light text-very-blue-dark">
