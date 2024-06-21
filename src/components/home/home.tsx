@@ -23,22 +23,22 @@ export function Home() {
     });
 
     return (
-        <section className="flex flex-col justify-between px-14 mt-[30px] bg-white dark:bg-very-dark-background">
-            <div className="flex justify-between items-center">
+        <section className="flex flex-col justify-between px-4 lg:px-14   mt-[30px] bg-white dark:bg-very-dark-background">
+            <div className="flex flex-wrap lg:flex-row  justify-between items-center">
                 <div className="relative group">
                     <input
                         type="text"
                         placeholder="Search for a country..."
                         value={searchTerm}
                         onChange={handleSearchChange}
-                        className="w-96 h-12 bg-white dark:bg-dark-blue  text-very-dark-light pl-14 shadow-md   rounded-lg"
+                        className="w-80 h-12 bg-white dark:bg-dark-blue  text-very-dark-light pl-14 shadow-md lg:w-96   rounded-lg"
                     />
                     <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
-                        <IoIosSearch className="dark:text-dark-gray-input text-very-dark-light size-4" />
+                        <IoIosSearch className="dark:text-very-dark-light text-dark-gray-input size-6" />
                     </div>
                 </div>
                 <select
-                    className="cursor-pointer w-44 h-12 flex justify-between px-2 shadow-md bg-white dark:bg-dark-blue dark:text-very-dark-light  text-very-dark-background"
+                    className="cursor-pointer w-44 h-12 flex justify-between px-2 mt-11 lg:mt-0 shadow-md bg-white dark:bg-dark-blue dark:text-very-dark-light  text-very-dark-background"
                     value={selectedRegion}
                     onChange={handleRegionChange}
                 >
@@ -50,7 +50,7 @@ export function Home() {
                     <option value="Oceania">Oceania</option>
                 </select>
             </div>
-            <div className="flex flex-wrap items-baseline gap-14 justify-between ">
+            <div className="flex justify-center flex-col items-center lg:grid  lg:grid-cols-4 gap-14 lg:justify-between ">
                 {filteredData.map((country) => (
                     <Card
                         key={country.name}
