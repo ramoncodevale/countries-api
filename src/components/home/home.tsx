@@ -23,7 +23,7 @@ export function Home() {
     });
 
     return (
-        <section className="flex flex-col justify-between px-4 lg:px-14 mt-8 bg-white dark:bg-very-dark-background min-h-screen">
+        <section className="flex flex-col justify-between px-4 lg:px-14 mt-8 bg-very-dark-light dark:bg-very-dark-background min-h-screen">
             <div className="flex flex-wrap lg:flex-row justify-between items-center mb-8">
                 <div className="relative group">
                     <input
