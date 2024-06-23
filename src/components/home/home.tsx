@@ -55,7 +55,7 @@ export function Home() {
                     <Card
                         key={country.name}
                         name={country.name}
-                        capital={country.capital}
+                        capital={country.capital || 'N/A'}
                         region={country.region}
                         population={country.population}
                         flags={country.flags}
