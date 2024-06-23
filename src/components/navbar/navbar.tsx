@@ -2,8 +2,13 @@ import { useContext } from "react";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { DarkModeContext } from "../../context/dark-mode-context";
 
+interface DarkModeContextType {
+  setDarkModeEnabled: (enabled: boolean) => void;
+  toggleDarkMode: () => void;
+}
+
 export function Navbar() {
-  const { setDarkModeEnabled, toggleDarkMode } = useContext(DarkModeContext);
+  const { setDarkModeEnabled, toggleDarkMode } = useContext<DarkModeContextType>(DarkModeContext);
 
   return (
     <nav className="flex justify-between w-full h-20 shadow-md items-center bg-white dark:bg-dark-blue px-4 lg:px-14">
